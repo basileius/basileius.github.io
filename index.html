@@ -61,11 +61,61 @@
       <li>\( \Delta t(x) = \alpha \sum_{y \in N(x)}(1 - \Phi(y,t)) \)</li>
       <li>\( H(x,t) = -\sum_i p_i(x,t) \log p_i(x,t) \)</li>
     </ul>
+    
     <h2 id="predictive-uniformity">Predictive Uniformity and Matter Formation / Προβλεπτική Ομοιομορφία και Δημιουργία Ύλης</h2>
 
-<p><strong>Introduction:</strong>  
-The following section extends the Cosmic Approximation Model (CAM) beyond its foundational framework.  
-It explores how large-scale uniformity and matter formation arise from the predictive bias dynamics of the informational field.</p>
+<section id="predictive-uniformity">
+  <h2>Predictive Uniformity & Matter Formation / Προβλεπτική Ομοιομορφία & Δημιουργία Ύλης</h2>
+
+  <p><em>Summary:</em> Large-scale uniformity and matter emerge from predictive bias dynamics in the informational field.</p>
+  <p><em>Περίληψη:</em> Η μακροσκοπική ομοιομορφία και η ύλη προκύπτουν από τη δυναμική της προβλεπτικής προκατάληψης στο πληροφοριακό πεδίο.</p>
+
+  <h3>Equation (9): Predictive Bias Diffusion Law</h3>
+  <p>
+    The predictive bias diffuses and equalizes across neighboring regions:
+  </p>
+  <p style="text-align:center;">
+    \[
+      \frac{\partial B(x,t)}{\partial t} = \eta \nabla^2 B(x,t)
+    \]
+  </p>
+  <p class="discrete">
+    Discrete form:
+    \[
+      B_{t+1}(x) = B_t(x) + \sum_{\Delta x}\,\eta\,C(x,\Delta x)\,[\,B_t(\Delta x)-B_t(x)\,]
+    \]
+  </p>
+
+  <h3>Εξίσωση (9): Εξίσωση Διάχυσης της Προβλεπτικής Προκατάληψης</h3>
+  <p>
+    Η προκατάληψη διαχέεται και εξισορροπείται μεταξύ γειτονικών περιοχών (όπου \(\eta\): ρυθμός προσαρμογής, \(C\): συσχέτιση).
+  </p>
+
+  <h3>Equation (10): Predictive Bias Divergence & Matter Formation</h3>
+  <p>
+    Local structures “freeze” when divergence exceeds a critical threshold:
+  </p>
+  <p style="text-align:center;">
+    \[
+      D(x,t)=|\nabla B(x,t)|^2,\quad
+      \frac{\partial B}{\partial t}=
+      \begin{cases}
+        \eta \nabla^2 B, & D<D_c\\
+        0, & D\ge D_c
+      \end{cases}
+    \]
+  </p>
+
+  <h3>Εξίσωση (10): Απόκλιση & Δημιουργία Ύλης</h3>
+  <p>
+    Όταν \(D\ge D_c\), η διάχυση αναστέλλεται τοπικά· το “παγωμένο bias” εκδηλώνεται ως ύλη/δομή.
+  </p>
+
+  <h4>Physical Analogy / Φυσική Αντιστοίχιση</h4>
+  <p>
+    Heat-like diffusion of \(B\) → uniformity (Eq. 9). Phase-transition-like locking at \(D_c\) → matter (Eq. 10).
+  </p>
+</section>
 
     <p>Full LaTeX paper: <a href="https://www.overleaf.com/read/kgmmtjxfqsbv#d5a29c" target="_blank">Read on Overleaf</a></p>
   </div>
