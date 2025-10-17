@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Cosmic Approximation Model — Vasileios Katanas</title>
+  <title>CAM — Predictive Uniformity & Matter Formation</title>
 
-  <!-- KaTeX -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha256-s2vN8qW8WQwzqQWmQm8xN2S7rJg7fEoE2+O0yJY5KxE=" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha256-Q8o8E2m7e2uR8dI3xYpZz9K6mX9pKpFz+8dK6x3q2iI=" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha256-9g0h6bq0Jzv0GqHq3o6k0Ckqz2kH4uYfQJcM3l5oQ0U=" crossorigin="anonymous"></script>
+  <!-- KaTeX (remove if your site already includes it) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       renderMathInElement(document.body, {
@@ -41,76 +41,29 @@
     section{background:var(--card);padding:18px;border-radius:14px;border:1px solid var(--rule);margin:18px 0}
     em{color:var(--muted)}
     hr{border:none;border-top:1px solid var(--rule);margin:26px 0}
-    footer{border-top:1px solid var(--rule);margin-top:30px;padding:20px 0;color:var(--muted);font-size:14px}
-    .center{ text-align:center }
-    .small{ font-size:14px; color:var(--muted) }
-    .top-link{ position:fixed; right:16px; bottom:16px; background:var(--card); border:1px solid var(--rule); padding:8px 10px; border-radius:10px }
-    code.katex { background: transparent; }
+    .center{text-align:center}
+    .small{font-size:14px;color:var(--muted)}
+    .top-link{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--rule);padding:8px 10px;border-radius:10px}
+    code.katex{background:transparent}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
       <nav aria-label="Main">
-        <a href="#intro">Intro</a>
-        <a href="#theory-gr">Θεωρία (GR 1–8)</a>
-        <a href="#predictive-uniformity-en">Uniformity & Matter (EN 9–10)</a>
-        <a href="#predictive-uniformity-gr">Ομοιομορφία & Ύλη (GR 9–10)</a>
-        <a href="#contact">Contact</a>
+        <!-- Αν έχεις ήδη menu, κράτα μόνο τα δύο επόμενα links -->
+        <a href="#predictive-uniformity-en">Uniformity (EN)</a>
+        <a href="#predictive-uniformity-gr">Ομοιομορφία (GR)</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <h1 id="intro">The Cosmic Approximation Model (CAM)</h1>
+    <h1>Cosmic Approximation Model (CAM) — New Section</h1>
     <section>
-      <p><em>Synopsis:</em> CAM views the universe as an informational field seeking local stable approximations through predictive adaptation. Matter emerges as stabilized informational prejudice; uniformity arises from diffusion of predictive bias.</p>
-      <p class="small">Full paper (Overleaf) — link placeholder: <a href="#" title="Overleaf link">add later</a></p>
+      <p><em>Synopsis:</em> This page adds the new section on Predictive Uniformity & Matter Formation (Equations 9–10), matching the concise style of your site. The full Overleaf version will later expand details.</p>
+      <p class="small">Author: Vasileios Katanas — CAM 2025</p>
     </section>
-
-    <!-- =======================
-         GREEK: BASE THEORY (1–8)
-         ======================= -->
-    <section id="theory-gr">
-      <h2>Η Θεωρία της Cosmic Approximation Model (CAM)</h2>
-      <p><em>Περίληψη:</em> Η CAM περιγράφει το σύμπαν ως πληροφοριακό πεδίο που επιδιώκει τοπικές σταθερότητες μέσω προσεγγιστικών προβλέψεων. Η ύλη, ο χρόνος και η ενέργεια αποτελούν εκδηλώσεις σταθεροποιημένων πληροφοριακών σχέσεων.</p>
-
-      <h3>Εξίσωση (1): Πληροφοριακή Συνάρτηση Πρόβλεψης</h3>
-      <p class="center">\[ \Psi(x,t) = f\!\big(\Phi(x,t),\,\delta(x,t)\big) \]</p>
-      <p>Η πρόβλεψη \(\Psi\) εξαρτάται από το τοπικό πεδίο \(\Phi\) και τη μεταβολή σφάλματος \(\delta\).</p>
-
-      <h3>Εξίσωση (2): Συνθήκη Ελαχίστου Σφάλματος</h3>
-      <p class="center">\[ \min E = \sum_i \bigl|\Psi_i - \Phi_i\bigr|^2 \]</p>
-      <p>Το σύστημα τείνει να ελαχιστοποιεί τη διαφορά πρόβλεψης–πραγματικότητας.</p>
-
-      <h3>Εξίσωση (3): Δυναμική Εξέλιξης Πεδίου</h3>
-      <p class="center">\[ \frac{\partial \Phi(x,t)}{\partial t} = -\nabla E(x,t) \]</p>
-      <p>Η εξέλιξη καθοδηγείται από τοπικές κλίσεις σφάλματος.</p>
-
-      <h3>Εξίσωση (4): Χρονική Παράμετρος Προσαρμογής</h3>
-      <p class="center">\[ \tau(x,t) = \int_0^t \Phi^{-1}\!\big(x,t'\big)\,dt' \]</p>
-      <p>Ο χρόνος ως πληροφοριακός ρυθμός προσαρμογής.</p>
-
-      <h3>Εξίσωση (5): Τοπική Απόκλιση Εντροπίας</h3>
-      <p class="center">\[ \Delta S(x) = \alpha \sum_{y\in N(x)} \bigl(1 - \Phi(y,t)\bigr) \]</p>
-      <p>Η εντροπία ως διαφοροποίηση γειτονικών περιοχών.</p>
-
-      <h3>Εξίσωση (6): Πληροφοριακή Ενέργεια</h3>
-      <p class="center">\[ E(x,t) = -\sum_i p_i(x,t)\log p_i(x,t) \]</p>
-      <p>Η ενέργεια ως μέτρο πληροφορίας/αβεβαιότητας.</p>
-
-      <h3>Εξίσωση (7): Προσέγγιση Πεδίου</h3>
-      <p class="center">\[ \Phi(x,t+\Delta t) = \Phi(x,t) + \beta\,\big[\Psi(x,t) - \Phi(x,t)\big] \]</p>
-      <p>Ανατροφοδότηση πρόβλεψης με ρυθμό μάθησης \(\beta\).</p>
-
-      <h3>Εξίσωση (8): Πληροφοριακή Ισορροπία</h3>
-      <p class="center">\[ H(x,t) = -\sum_i p_i(x,t)\log p_i(x,t) \]</p>
-      <p>Ισορροπία όταν η πληροφοριακή εντροπία σταθεροποιείται σε τοπικό ελάχιστο.</p>
-
-      <p><strong>Συμπέρασμα:</strong> Οι (1)–(8) περιγράφουν ένα αυτοπροσαρμοζόμενο πληροφοριακό πεδίο. Η συνέχεια (9–10) εξηγεί την ομοιομορφία και τη δημιουργία ύλης.</p>
-    </section>
-
-    <hr />
 
     <!-- =======================
          ENGLISH: NEW SECTION (9–10)
@@ -126,6 +79,8 @@
 
       <h3>Equation (10): Predictive Bias Divergence & Matter Formation</h3>
       <p>Local structures “freeze” when predictive divergence exceeds a critical threshold:</p>
+
+      <!-- split the definition and the cases into two blocks (safer for KaTeX/MathJax) -->
       <p class="center">\[ D(x,t)=\lvert\nabla B(x,t)\rvert^2 \]</p>
       <p class="center">\[
         \frac{\partial B}{\partial t} =
@@ -134,11 +89,14 @@
           0, & D(x,t) \geq D_c
         \end{cases}
       \]</p>
+
       <p>When \(D \geq D_c\), diffusion halts locally — the frozen bias manifests as matter or structure.</p>
 
       <h4>Physical Analogy</h4>
       <p>Heat-like diffusion of \(B\) → uniformity (Eq. 9). Phase-transition-like locking at \(D_c\) → matter (Eq. 10).</p>
     </section>
+
+    <hr />
 
     <!-- =======================
          GREEK: NEW SECTION (9–10)
@@ -154,6 +112,8 @@
 
       <h3>Εξίσωση (10): Απόκλιση Προβλεπτικής Προκατάληψης & Δημιουργία Ύλης</h3>
       <p>Τοπικές δομές “παγώνουν” όταν η απόκλιση ξεπεράσει κρίσιμο όριο:</p>
+
+      <!-- split blocks for robust rendering -->
       <p class="center">\[ D(x,t)=\lvert\nabla B(x,t)\rvert^2 \]</p>
       <p class="center">\[
         \frac{\partial B}{\partial t} =
@@ -162,25 +122,20 @@
           0, & D(x,t) \geq D_c
         \end{cases}
       \]</p>
+
       <p>Όταν \(D \geq D_c\), η διάχυση σταματά τοπικά — το “παγωμένο bias” εκδηλώνεται ως ύλη/δομή.</p>
 
       <h4>Φυσική Αντιστοίχιση</h4>
       <p>Διάχυση τύπου θερμότητας του \(B\) → ομοιομορφία (Εξ. 9). Πάγωμα τύπου μετάβασης φάσης στο \(D_c\) → ύλη (Εξ. 10).</p>
     </section>
 
-    <a class="top-link" href="#intro" aria-label="Back to top">↑ Top</a>
+    <a class="top-link" href="#predictive-uniformity-en" aria-label="Back to top">↑ Top</a>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>CAM 2025 | Vasileios Katanas — All content assisted by AI conceptualization and structuring.</p>
-      <p>For inquiries or feedback: <a href="mailto:vasileioskatanas@gmail.com">vasileioskatanas@gmail.com</a></p>
+      <p>CAM 2025 | Vasileios Katanas</p>
+      <p>Feedback: <a href="mailto:vasileioskatanas@gmail.com">vasileioskatanas@gmail.com</a></p>
     </section>
-
-    <footer>
-      <div class="wrap">
-        © 2025 — Vasileios Katanas. Minimal static page. Math rendering via KaTeX.
-      </div>
-    </footer>
   </main>
 </body>
 </html>
