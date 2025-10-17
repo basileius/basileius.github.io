@@ -69,7 +69,7 @@
 
   <h3>Equation (9): Predictive Bias Diffusion Law</h3>
   <p>
-    The predictive bias diffuses and equalizes across neighboring regions:
+      The predictive bias diffuses and equalizes across neighboring regions:
   </p>
   <p style="text-align:center;">
     \[
@@ -85,18 +85,24 @@
 
   <h3>Equation (10): Predictive Bias Divergence & Matter Formation</h3>
   <p>
-    Local structures “freeze” when predictive divergence exceeds a critical threshold:
+    Local structures “freeze” when predictive divergence exceeds a critical threshold:  
   </p>
-  <p style="text-align:center;">
-    \[
-      D(x,t)=|\nabla B(x,t)|^2,\quad
-      \frac{\partial B}{\partial t}=
-      \begin{cases}
-        \eta \nabla^2 B, & D<D_c\\
-        0, & D\ge D_c
-      \end{cases}
-    \]
-  </p>
+  
+ <p style="text-align:center;">
+  \[
+    D(x,t)=\lvert\nabla B(x,t)\rvert^2
+  \]
+</p>
+<p style="text-align:center;">
+  \[
+    \frac{\partial B}{\partial t} =
+    \begin{cases}
+      \eta \nabla^2 B, & D(x,t) < D_c\\
+      0, & D(x,t) \geq D_c
+    \end{cases}
+  \]
+</p>
+
   <p>
     When \(D \ge D_c\), diffusion halts locally — the frozen bias manifests as matter or structure.
   </p>
