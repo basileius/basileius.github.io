@@ -3,203 +3,254 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cosmic Approximation Model — Vasileios Katanas</title>
+  <title>The Cosmic Approximation Model — Vasileios Katanas</title>
 
-  <!-- KaTeX (safe defaults) -->
+  <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      renderMathInElement(document.body, {
-        delimiters: [
-          { left: "\\[", right: "\\]", display: true },
-          { left: "\\(", right: "\\)", display: false },
-          { left: "$$", right: "$$", display: true }
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMathInElement(document.body,{
+        delimiters:[
+          {left:"\\[",right:"\\]",display:true},
+          {left:"\\(",right:"\\)",display:false},
+          {left:"$$",right:"$$",display:true}
         ],
-        throwOnError: false
+        throwOnError:false
       });
     });
   </script>
 
   <style>
     :root{
-      --bg:#0e0f12; --fg:#e7eaf0; --muted:#b6bcc8; --accent:#5aa9ff; --sub:#98c1ff;
-      --card:#151821; --rule:#2a2f3a;
+      --bg:#0e0f12; --fg:#e7eaf0; --muted:#b6bcc8;
+      --accent:#5aa9ff; --sub:#98c1ff; --card:#151821; --rule:#2a2f3a;
     }
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
       font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;}
-    a{color:var(--sub);text-decoration:none} a:hover{text-decoration:underline}
-    header{position:sticky;top:0;background:rgba(14,15,18,.9);backdrop-filter:saturate(180%) blur(8px);
-      border-bottom:1px solid var(--rule);z-index:10}
-    .wrap{max-width:980px;margin:0 auto;padding:0 16px}
-    nav{display:flex;gap:12px;flex-wrap:wrap;padding:10px 0}
-    nav a{padding:6px 10px;border-radius:10px;border:1px solid transparent}
-    nav a:hover{border-color:var(--rule)}
-    h1{font-size:28px;margin:22px 0}
-    h2{font-size:22px;margin:26px 0 10px;color:var(--accent)}
-    h3{font-size:18px;margin:20px 0 8px;color:var(--sub)}
-    h4{font-size:16px;margin:14px 0 6px;color:var(--sub)}
-    section{background:var(--card);padding:18px;border-radius:14px;border:1px solid var(--rule);margin:18px 0}
-    .center{text-align:center}
-    em{color:var(--muted)} .small{font-size:14px;color:var(--muted)}
+    header{position:sticky;top:0;background:rgba(14,15,18,.9);
+      backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--rule);z-index:10}
+    nav{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:12px}
+    nav a{color:var(--sub);text-decoration:none;padding:6px 10px;border-radius:8px}
+    nav a:hover{background:var(--rule)}
+    main{max-width:980px;margin:0 auto;padding:0 16px}
+    section{background:var(--card);margin:18px 0;padding:18px;border-radius:14px;border:1px solid var(--rule)}
+    h1{font-size:28px;margin:24px 0}
+    h2{color:var(--accent);margin:20px 0 10px}
+    h3{color:var(--sub);margin:18px 0 8px}
+    em{color:var(--muted)} .center{text-align:center}
+    .small{font-size:14px;color:var(--muted)}
     .top-link{position:fixed;right:16px;bottom:16px;background:var(--card);
-      border:1px solid var(--rule);padding:8px 10px;border-radius:10px}
+      border:1px solid var(--rule);padding:6px 10px;border-radius:10px}
+    a{color:var(--sub);text-decoration:none} a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <nav aria-label="Main">
-        <a href="#theory-en">EN 1–8</a>
-        <a href="#uniformity-en">EN 9–10</a>
-        <a href="#theory-gr">GR 1–8</a>
-        <a href="#uniformity-gr">GR 9–10</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <nav aria-label="Main">
+    <a href="#english">English</a>
+    <a href="#appendix-en">Appendix EN</a>
+    <a href="#uniformity-en">Uniformity EN (Eq. 9–10)</a>
+    <a href="#greek">Ελληνικά</a>
+    <a href="#appendix-gr">Παράρτημα GR</a>
+    <a href="#uniformity-gr">Ομοιομορφία GR (Εξ. 9–10)</a>
+  </nav>
+</header>
 
-  <main class="wrap">
-    <h1>Cosmic Approximation Model (CAM)</h1>
-    <section id="intro">
-      <p><em>Synopsis:</em> CAM models the universe as an informational field seeking local stable approximations via predictive adaptation. 
-      Matter is stabilized informational prejudice; large-scale uniformity arises from diffusion of predictive bias.</p>
-      <p class="small">This page compiles the concise EN/GR sections (Equations 1–10). A detailed Overleaf version can replace summaries later.</p>
-    </section>
+<main>
+  <h1>The Cosmic Approximation Model (CAM)</h1>
+  <section>
+    <p class="small">AI-assisted theoretical framework — Vasileios Katanas<br>
+      October 18, 2025</p>
+  </section>
 
-    <!-- =========== ENGLISH: BASE THEORY (1–8) =========== -->
-    <section id="theory-en">
-      <h2>Foundations (EN): Equations (1)–(8)</h2>
-      <p><em>Summary:</em> The field predicts, corrects, and settles to local informational equilibria.</p>
+  <!-- ========== ENGLISH ========== -->
+  <section id="english">
+    <h2>Abstract</h2>
+    <p>
+      The Cosmic Approximation Model (CAM) proposes that the universe emerges from chaotic informational fields
+      through localized stabilization processes, without relying on fixed external structures. It introduces a dynamic
+      view of reality where approximation and convergence replace traditional notions of absolute laws.
+    </p>
 
-      <h3>Equation (1): Predictive Mapping</h3>
-      <p class="center">\[ \Psi(x,t) = f\!\big(\Phi(x,t),\,\delta(x,t)\big) \]</p>
-      <p>\(\Psi\): prediction; \(\Phi\): local field; \(\delta\): error variation.</p>
+    <h3>1 Introduction</h3>
+    <p>
+      CAM views the universe not as derived from fixed laws but as continuously approaching coherence through local
+      interactions. Reality is an emergent phenomenon arising from recursive approximation over chaotic substrates.
+    </p>
 
-      <h3>Equation (2): Minimum Error Condition</h3>
-      <p class="center">\[ \min E = \sum_i \bigl|\Psi_i - \Phi_i\bigr|^2 \]</p>
-      <p>The field tends to minimize prediction–reality mismatch.</p>
+    <h3>2 Chaos as Foundational Substrate</h3>
+    <p>
+      Chaos is pure undirected potential. Structures emerge as islands of provisional stability through localized
+      convergence of informational deviations.
+    </p>
 
-      <h3>Equation (3): Field Dynamics</h3>
-      <p class="center">\[ \frac{\partial \Phi(x,t)}{\partial t} = -\nabla E(x,t) \]</p>
-      <p>Evolution follows local error gradients.</p>
+    <h3>3 Informational Stability and Local Time</h3>
+    <p>
+      Time arises from the local rate of convergence. Where approximation is efficient, time flows quickly; where
+      deviation persists, time dilates.
+    </p>
 
-      <h3>Equation (4): Informational Time</h3>
-      <p class="center">\[ \tau(x,t) = \int_0^t \Phi^{-1}\!\big(x,t'\big)\,dt' \]</p>
-      <p>Time as the cumulative rate of adaptation.</p>
+    <h3>4 Recursive Emergence and Evolution</h3>
+    <p>
+      Each stabilized structure seeds new divergences, leading to a fractal-like buildup of complexity. The universe
+      evolves not toward a perfect model, but through iterative stabilization cycles.
+    </p>
 
-      <h3>Equation (5): Local Entropy Divergence</h3>
-      <p class="center">\[ \Delta S(x) = \alpha \sum_{y\in N(x)} \bigl(1 - \Phi(y,t)\bigr) \]</p>
-      <p>Entropy measures neighborhood differentiation.</p>
+    <h3>5 Entropy, Information Loss, and Predictive Fields</h3>
+    <p>
+      Entropy reflects the equilibrium state of information flow. Too much order or too much chaos both destroy usable
+      information. Localized fields maintain balance, allowing temporary persistence of material reality.
+    </p>
 
-      <h3>Equation (6): Informational Energy</h3>
-      <p class="center">\[ E(x,t) = -\sum_i p_i(x,t)\log p_i(x,t) \]</p>
-      <p>Energy mirrors information/uncertainty.</p>
+    <h3>6 Quantum Indeterminacy as Field Displacement</h3>
+    <p>
+      Quantum indeterminacy arises not from randomness, but from the displacement of data-sheets during interaction,
+      triggering shifts in expected outcomes without pure randomness.
+    </p>
 
-      <h3>Equation (7): Field Update</h3>
-      <p class="center">\[ \Phi(x,t+\Delta t) = \Phi(x,t) + \beta\,\big[\Psi(x,t) - \Phi(x,t)\big] \]</p>
-      <p>Feedback update with learning rate \(\beta\).</p>
+    <!-- UPDATED SECTION 7 (EN) -->
+    <h3>7 Entropic Collapse and Rebirth</h3>
+    <p>
+      When informational entropy surpasses its critical threshold, the predictive bias \(B(x,t)\) loses coherence.
+      At microscopic scales, this collapse dissolves matter back into chaotic radiation — the reversion of frozen bias
+      into the universal informational soup from which all structures arise. Such collapses mark not an end but a phase
+      transition of stability: the release of stored informational tension resets local fields, enabling new cycles of
+      approximation and convergence.
+    </p>
+  </section>
 
-      <h3>Equation (8): Informational Equilibrium</h3>
-      <p class="center">\[ H(x,t) = -\sum_i p_i(x,t)\log p_i(x,t) \]</p>
-      <p>Equilibrium when informational entropy stabilizes at a local extremum.</p>
-    </section>
+  <section id="appendix-en">
+    <h2>Appendix – Mathematical Framework</h2>
+    <p class="center">\[ \Phi(x,t)=\frac{\partial\sigma_x(t)}{\partial t}+\epsilon(x,t) \]</p>
+    <p class="center">\[ V(x,t)=\sum_{y\in N(x)} w_{xy}\big(1-\Phi(y,t)\big) \]</p>
+    <p class="center">\[ \sigma_x(t+1)=f\big(\sigma_x(t), V(x,t), \eta_x(t)\big) \]</p>
+    <p class="center">\[ \tau(x)=\int_0^T \Phi^{-1}(x,t)\,dt \]</p>
+    <p class="center">\[ \Delta t(x)=\alpha \sum_{y\in N(x)} (1-\Phi(y,t)) \]</p>
+    <p class="center">\[ H(x,t)=-\sum_i p_i(x,t)\log p_i(x,t) \]</p>
+  </section>
 
-    <!-- =========== ENGLISH: NEW SECTION (9–10) =========== -->
-    <section id="uniformity-en">
-      <h2>Predictive Uniformity & Matter Formation (EN): Equations (9)–(10)</h2>
+  <!-- ========== EN: NEW SECTION (Eq. 9–10) ========== -->
+  <section id="uniformity-en">
+    <h2>Predictive Uniformity & Matter Formation (Eq. 9–10)</h2>
+    <h3>Equation (9): Predictive Bias Diffusion Law</h3>
+    <p>The predictive bias diffuses and equalizes across neighboring regions:</p>
+    <p class="center">\[ \frac{\partial B(x,t)}{\partial t} = \eta \nabla^2 B(x,t) \]</p>
+    <p>Discrete form:
+      \[ B_{t+1}(x) = B_t(x) + \sum_{\Delta x}\,\eta\,C(x,\Delta x)\,\big[\,B_t(\Delta x)-B_t(x)\,\big] \]
+    </p>
 
-      <h3>Equation (9): Predictive Bias Diffusion Law</h3>
-      <p>The predictive bias diffuses and equalizes across neighboring regions.</p>
-      <p class="center">\[ \frac{\partial B(x,t)}{\partial t} = \eta \nabla^2 B(x,t) \]</p>
-      <p>Discrete: \[ B_{t+1}(x) = B_t(x) + \sum_{\Delta x}\,\eta\,C(x,\Delta x)\,\big[\,B_t(\Delta x)-B_t(x)\,\big] \]</p>
+    <h3>Equation (10): Predictive Bias Divergence & Matter Formation</h3>
+    <p>Local structures “freeze” when predictive divergence exceeds a critical threshold:</p>
+    <p class="center">\[ D(x,t)=\lvert\nabla B(x,t)\rvert^2 \]</p>
+    <p class="center">\[
+      \frac{\partial B}{\partial t} =
+      \begin{cases}
+        \eta \nabla^2 B, & D(x,t) < D_c\\
+        0, & D(x,t) \geq D_c
+      \end{cases}
+    \]</p>
+    <p>When \(D \geq D_c\), diffusion halts locally — the frozen bias manifests as matter or structure.</p>
 
-      <h3>Equation (10): Predictive Bias Divergence & Matter Formation</h3>
-      <p>Local structures “freeze” when divergence exceeds a critical threshold.</p>
-      <p class="center">\[ D(x,t)=\lvert\nabla B(x,t)\rvert^2 \]</p>
-      <p class="center">\[
-        \frac{\partial B}{\partial t} =
-        \begin{cases}
-          \eta \nabla^2 B, & D(x,t) < D_c\\
-          0, & D(x,t) \geq D_c
-        \end{cases}
-      \]</p>
-      <p>When \(D \geq D_c\), diffusion halts locally — frozen bias manifests as matter/structure.</p>
+    <h4>Physical Analogy</h4>
+    <p>Heat-like diffusion of \(B\) → uniformity (Eq. 9). Phase-transition-like locking at \(D_c\) → matter (Eq. 10).</p>
+  </section>
 
-      <h4>Physical Analogy</h4>
-      <p>Heat-like diffusion of \(B\) → uniformity (Eq. 9). Phase-transition-like locking at \(D_c\) → matter (Eq. 10).</p>
-    </section>
+  <!-- ========== GREEK ========== -->
+  <section id="greek">
+    <h2>Περίληψη</h2>
+    <p>
+      Το Μοντέλο Κοσμικής Προσέγγισης (CAM) προτείνει ότι το σύμπαν αναδύεται από χαοτικά πληροφοριακά πεδία
+      μέσω τοπικών διαδικασιών σταθεροποίησης, χωρίς να βασίζεται σε σταθερές εξωτερικές δομές. Εισάγει μια δυναμική
+      θεώρηση της πραγματικότητας όπου η προσέγγιση και η σύγκλιση αντικαθιστούν τις παραδοσιακές έννοιες των απόλυτων νόμων.
+    </p>
 
-    <!-- =========== GREEK: ΒΑΣΙΚΗ ΘΕΩΡΙΑ (1–8) =========== -->
-    <section id="theory-gr">
-      <h2>Θεμέλια (GR): Εξισώσεις (1)–(8)</h2>
-      <p><em>Περίληψη:</em> Το πεδίο προβλέπει, διορθώνει και κατασταλάζει σε τοπικές πληροφοριακές ισορροπίες.</p>
+    <h3>1 Εισαγωγή</h3>
+    <p>
+      Το CAM θεωρεί ότι το σύμπαν δεν προέρχεται από σταθερούς νόμους αλλά προσεγγίζει συνεχώς τη συνοχή μέσω
+      τοπικών αλληλεπιδράσεων. Η πραγματικότητα είναι ένα αναδυόμενο φαινόμενο που προκύπτει από αναδρομική προσέγγιση
+      πάνω σε χαοτικά υπόβαθρα.
+    </p>
 
-      <h3>Εξίσωση (1): Πληροφοριακή Συνάρτηση Πρόβλεψης</h3>
-      <p class="center">\[ \Psi(x,t) = f\!\big(\Phi(x,t),\,\delta(x,t)\big) \]</p>
-      <p>\(\Psi\): πρόβλεψη, \(\Phi\): τοπικό πεδίο, \(\delta\): μεταβολή σφάλματος.</p>
+    <h3>2 Το Χάος ως Θεμελιώδες Υπόστρωμα</h3>
+    <p>
+      Το χάος είναι καθαρή μη κατευθυνόμενη δυνατότητα. Οι δομές αναδύονται ως νησίδες προσωρινής σταθερότητας
+      μέσω τοπικής σύγκλισης πληροφοριακών αποκλίσεων.
+    </p>
 
-      <h3>Εξίσωση (2): Συνθήκη Ελαχίστου Σφάλματος</h3>
-      <p class="center">\[ \min E = \sum_i \bigl|\Psi_i - \Phi_i\bigr|^2 \]</p>
-      <p>Ελαχιστοποίηση απόκλισης πρόβλεψης–πραγματικότητας.</p>
+    <h3>3 Πληροφοριακή Σταθερότητα και Τοπικός Χρόνος</h3>
+    <p>
+      Ο χρόνος προκύπτει από τον τοπικό ρυθμό σύγκλισης. Όπου η προσέγγιση είναι αποδοτική, ο χρόνος κυλά γρήγορα·
+      όπου η απόκλιση επιμένει, ο χρόνος διαστέλλεται.
+    </p>
 
-      <h3>Εξίσωση (3): Δυναμική Εξέλιξης Πεδίου</h3>
-      <p class="center">\[ \frac{\partial \Phi(x,t)}{\partial t} = -\nabla E(x,t) \]</p>
-      <p>Εξέλιξη με βάση τις τοπικές κλίσεις σφάλματος.</p>
+    <h3>4 Αναδρομική Ανάδυση και Εξέλιξη</h3>
+    <p>
+      Κάθε σταθεροποιημένη δομή σπέρνει νέες αποκλίσεις, οδηγώντας σε ανάπτυξη φρακταλικής πολυπλοκότητας.
+      Το σύμπαν εξελίσσεται όχι προς ένα τέλειο μοντέλο, αλλά μέσω κυκλικής σταθεροποίησης.
+    </p>
 
-      <h3>Εξίσωση (4): Χρονική Παράμετρος Προσαρμογής</h3>
-      <p class="center">\[ \tau(x,t) = \int_0^t \Phi^{-1}\!\big(x,t'\big)\,dt' \]</p>
-      <p>Ο χρόνος ως συσσωρευμένος ρυθμός προσαρμογής.</p>
+    <h3>5 Εντροπία, Απώλεια Πληροφορίας και Προβλεπτικά Πεδία</h3>
+    <p>
+      Η εντροπία αντανακλά την ισορροπία της ροής πληροφορίας. Υπερβολική τάξη ή χάος καταστρέφουν τη χρησιμοποιήσιμη
+      πληροφορία. Τα τοπικά πεδία διατηρούν ισορροπία, επιτρέποντας την προσωρινή υλική πραγματικότητα.
+    </p>
 
-      <h3>Εξίσωση (5): Τοπική Απόκλιση Εντροπίας</h3>
-      <p class="center">\[ \Delta S(x) = \alpha \sum_{y\in N(x)} \bigl(1 - \Phi(y,t)\bigr) \]</p>
-      <p>Η εντροπία μετρά τη διαφοροποίηση γειτονικών περιοχών.</p>
+    <h3>6 Κβαντική Απροσδιοριστία ως Μετατόπιση Πεδίου</h3>
+    <p>
+      Η κβαντική απροσδιοριστία δεν προκύπτει από τυχαιότητα, αλλά από τη μετατόπιση των data-sheets κατά την αλληλεπίδραση,
+      προκαλώντας μεταβολές στα αναμενόμενα αποτελέσματα χωρίς καθαρή τυχαιότητα.
+    </p>
 
-      <h3>Εξίσωση (6): Πληροφοριακή Ενέργεια</h3>
-      <p class="center">\[ E(x,t) = -\sum_i p_i(x,t)\log p_i(x,t) \]</p>
-      <p>Η ενέργεια ως μέτρο πληροφορίας/αβεβαιότητας.</p>
+    <!-- ΕΝΗΜΕΡΩΜΕΝΗ ΕΝΟΤΗΤΑ 7 (GR) -->
+    <h3>7 Κατάρρευση της Εντροπίας και Επανεκκίνηση</h3>
+    <p>
+      Όταν η πληροφοριακή εντροπία υπερβεί το κρίσιμο όριό της, η προβλεπτική προκατάληψη \(B(x,t)\) χάνει τη συνοχή της.
+      Σε μικροσκοπική κλίμακα, αυτή η κατάρρευση διαλύει την ύλη σε χαοτική ακτινοβολία — την επιστροφή της «παγωμένης
+      προκατάληψης» στην κοσμική πληροφοριακή σούπα απ’ όπου προήλθε κάθε δομή. Οι καταρρεύσεις αυτές δεν σηματοδοτούν
+      το τέλος αλλά μια μετάβαση φάσης: η απελευθέρωση της συσσωρευμένης πληροφοριακής τάσης επαναρυθμίζει τα τοπικά πεδία,
+      επιτρέποντας νέους κύκλους προσέγγισης και σύγκλισης.
+    </p>
+  </section>
 
-      <h3>Εξίσωση (7): Προσέγγιση Πεδίου</h3>
-      <p class="center">\[ \Phi(x,t+\Delta t) = \Phi(x,t) + \beta\,\big[\Psi(x,t) - \Phi(x,t)\big] \]</p>
-      <p>Ανατροφοδότηση πρόβλεψης με ρυθμό μάθησης \(\beta\).</p>
+  <section id="appendix-gr">
+    <h2>Παράρτημα – Μαθηματικό Πλαίσιο</h2>
+    <p class="center">\[ \Phi(x,t)=\frac{\partial\sigma_x(t)}{\partial t}+\epsilon(x,t) \]</p>
+    <p class="center">\[ V(x,t)=\sum_{y\in N(x)} w_{xy}\big(1-\Phi(y,t)\big) \]</p>
+    <p class="center">\[ \sigma_x(t+1)=f\big(\sigma_x(t), V(x,t), \eta_x(t)\big) \]</p>
+    <p class="center">\[ \tau(x)=\int_0^T \Phi^{-1}(x,t)\,dt \]</p>
+    <p class="center">\[ \Delta t(x)=\alpha \sum_{y\in N(x)} (1-\Phi(y,t)) \]</p>
+    <p class="center">\[ H(x,t)=-\sum_i p_i(x,t)\log p_i(x,t) \]</p>
+  </section>
 
-      <h3>Εξίσωση (8): Πληροφοριακή Ισορροπία</h3>
-      <p class="center">\[ H(x,t) = -\sum_i p_i(x,t)\log p_i(x,t) \]</p>
-      <p>Ισορροπία όταν η πληροφοριακή εντροπία σταθεροποιείται τοπικά.</p>
-    </section>
+  <!-- ========== GR: ΝΕΑ ΕΝΟΤΗΤΑ (Εξ. 9–10) ========== -->
+  <section id="uniformity-gr">
+    <h2>Προβλεπτική Ομοιομορφία & Δημιουργία Ύλης (Εξ. 9–10)</h2>
+    <h3>Εξίσωση (9): Εξίσωση Διάχυσης της Προβλεπτικής Προκατάληψης</h3>
+    <p>Η προβλεπτική προκατάληψη διαχέεται και εξισορροπείται μεταξύ γειτονικών περιοχών:</p>
+    <p class="center">\[ \frac{\partial B(x,t)}{\partial t} = \eta \nabla^2 B(x,t) \]</p>
+    <p>Διακριτή μορφή:
+      \[ B_{t+1}(x) = B_t(x) + \sum_{\Delta x}\,\eta\,C(x,\Delta x)\,\big[\,B_t(\Delta x)-B_t(x)\,\big] \]
+    </p>
 
-    <!-- =========== GREEK: ΝΕΑ ΕΝΟΤΗΤΑ (9–10) =========== -->
-    <section id="uniformity-gr">
-      <h2>Προβλεπτική Ομοιομορφία & Δημιουργία Ύλης (GR): Εξισώσεις (9)–(10)</h2>
+    <h3>Εξίσωση (10): Απόκλιση Προβλεπτικής Προκατάληψης & Δημιουργία Ύλης</h3>
+    <p>Τοπικές δομές “παγώνουν” όταν η απόκλιση ξεπεράσει κρίσιμο όριο:</p>
+    <p class="center">\[ D(x,t)=\lvert\nabla B(x,t)\rvert^2 \]</p>
+    <p class="center">\[
+      \frac{\partial B}{\partial t} =
+      \begin{cases}
+        \eta \nabla^2 B, & D(x,t) < D_c\\
+        0, & D(x,t) \geq D_c
+      \end{cases}
+    \]</p>
+    <p>Όταν \(D \geq D_c\), η διάχυση σταματά τοπικά — το “παγωμένο bias” εκδηλώνεται ως ύλη/δομή.</p>
 
-      <h3>Εξίσωση (9): Εξίσωση Διάχυσης της Προβλεπτικής Προκατάληψης</h3>
-      <p>Η προκατάληψη διαχέεται και εξισορροπείται μεταξύ γειτονικών περιοχών.</p>
-      <p class="center">\[ \frac{\partial B(x,t)}{\partial t} = \eta \nabla^2 B(x,t) \]</p>
-      <p>Διακριτά: \[ B_{t+1}(x) = B_t(x) + \sum_{\Delta x}\,\eta\,C(x,\Delta x)\,\big[\,B_t(\Delta x)-B_t(x)\,\big] \]</p>
+    <h4>Φυσική Αντιστοίχιση</h4>
+    <p>Διάχυση τύπου θερμότητας του \(B\) → ομοιομορφία (Εξ. 9). Πάγωμα τύπου μετάβασης φάσης στο \(D_c\) → ύλη (Εξ. 10).</p>
+  </section>
 
-      <h3>Εξίσωση (10): Απόκλιση Προβλεπτικής Προκατάληψης & Δημιουργία Ύλης</h3>
-      <p>Τοπικές δομές “παγώνουν” όταν η απόκλιση ξεπερνά κρίσιμο όριο.</p>
-      <p class="center">\[ D(x,t)=\lvert\nabla B(x,t)\rvert^2 \]</p>
-      <p class="center">\[
-        \frac{\partial B}{\partial t} =
-        \begin{cases}
-          \eta \nabla^2 B, & D(x,t) < D_c\\
-          0, & D(x,t) \geq D_c
-        \end{cases}
-      \]</p>
-      <p>Όταν \(D \geq D_c\), η διάχυση σταματά τοπικά — το “παγωμένο bias” εκδηλώνεται ως ύλη/δομή.</p>
-
-      <h4>Φυσική Αντιστοίχιση</h4>
-      <p>Διάχυση τύπου θερμότητας του \(B\) → ομοιομορφία (Εξ. 9). Πάγωμα τύπου μετάβασης φάσης στο \(D_c\) → ύλη (Εξ. 10).</p>
-    </section>
-
-    <a class="top-link" href="#theory-en" aria-label="Back to top">↑ Top</a>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>CAM 2025 — Vasileios Katanas</p>
-      <p>Email: <a href="mailto:vasileioskatanas@gmail.com">vasileioskatanas@gmail.com</a></p>
-    </section>
-  </main>
+  <a class="top-link" href="#english" aria-label="Back to top">↑ Top</a>
+</main>
 </body>
 </html>
